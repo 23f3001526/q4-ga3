@@ -1,0 +1,3 @@
+# My Repository
+
+[![Daily Auto Commit](https://github.com/23f3001526/q4-ga3/actions/workflows/daily-commit.yml/badge.svg)](https://github.com/23f3001526/q4-ga3/actions/workflows/daily-commit.yml)
