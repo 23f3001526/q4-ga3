@@ -1,9 +1,12 @@
 name: Daily Auto Commit
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    - cron: '17 3 * * *'   # Runs daily at 03:17 UTC (specific time, no wildcards)
-  workflow_dispatch:        # Allows manual trigger
+    - cron: '17 3 * * *'
+  workflow_dispatch:
 
 jobs:
   daily-commit:
@@ -25,5 +28,5 @@ jobs:
         run: |
           echo "Last run: $(date)" >> daily-log.txt
           git add daily-log.txt
-          git commit -m "Daily auto commit $(date)" || echo "No changes to commit"
+          git commit -m "Daily auto commit $(date)"
           git push
